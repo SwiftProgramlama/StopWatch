@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StopWatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hqF-xV-RCY">
+                                <color key="backgroundColor" red="0.87373737370000004" green="0.87373737370000004" blue="0.87373737370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="FWD-FX-9Uz"/>
+                                    <constraint firstAttribute="height" constant="100" id="al9-sh-kc3"/>
+                                </constraints>
+                                <state key="normal" title="Tur"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="tourOrReset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="URE-si-Sna"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JeN-pt-ULA">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="eHu-iW-Gbq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QE2-z3-cHT">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="TZ2-aF-k8N"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JGi-f1-8Q3">
+                                <color key="backgroundColor" red="0.87373737370000004" green="0.87373737370000004" blue="0.87373737370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="aby-fk-cJ1"/>
+                                    <constraint firstAttribute="width" constant="100" id="hA6-lc-tDf"/>
+                                </constraints>
+                                <state key="normal" title="Başlat"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="startOrStop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pfU-7k-LAr"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bUA-Fg-oJ4">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hqF-xV-RCY" firstAttribute="baseline" secondItem="JGi-f1-8Q3" secondAttribute="baseline" id="4Wq-cw-HQk"/>
+                            <constraint firstItem="JeN-pt-ULA" firstAttribute="trailing" secondItem="bUA-Fg-oJ4" secondAttribute="trailing" id="7uB-LW-nom"/>
+                            <constraint firstItem="hqF-xV-RCY" firstAttribute="top" secondItem="bUA-Fg-oJ4" secondAttribute="bottom" constant="8" symbolic="YES" id="FLM-rK-enV"/>
+                            <constraint firstItem="JeN-pt-ULA" firstAttribute="trailing" secondItem="JGi-f1-8Q3" secondAttribute="trailing" id="FLb-sC-jeW"/>
+                            <constraint firstItem="JeN-pt-ULA" firstAttribute="leading" secondItem="hqF-xV-RCY" secondAttribute="leading" id="Hh9-CV-ppB"/>
+                            <constraint firstItem="bUA-Fg-oJ4" firstAttribute="top" secondItem="QE2-z3-cHT" secondAttribute="bottom" constant="8" symbolic="YES" id="Pcl-tq-OG5"/>
+                            <constraint firstItem="JeN-pt-ULA" firstAttribute="leading" secondItem="bUA-Fg-oJ4" secondAttribute="leading" id="Qoi-xe-CXc"/>
+                            <constraint firstItem="hqF-xV-RCY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-5" id="Rp6-5v-ckZ"/>
+                            <constraint firstAttribute="bottom" secondItem="hqF-xV-RCY" secondAttribute="bottom" constant="20" symbolic="YES" id="U9i-56-D7I"/>
+                            <constraint firstItem="JeN-pt-ULA" firstAttribute="trailing" secondItem="QE2-z3-cHT" secondAttribute="trailing" id="WRy-0V-CeT"/>
+                            <constraint firstItem="JGi-f1-8Q3" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="chE-kz-VRr"/>
+                            <constraint firstItem="JeN-pt-ULA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="itD-Vg-LKz"/>
+                            <constraint firstItem="QE2-z3-cHT" firstAttribute="top" secondItem="JeN-pt-ULA" secondAttribute="bottom" constant="8" symbolic="YES" id="jtT-ML-KT0"/>
+                            <constraint firstItem="JeN-pt-ULA" firstAttribute="leading" secondItem="QE2-z3-cHT" secondAttribute="leading" id="xFO-pb-qVB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mainTimeLabel" destination="QE2-z3-cHT" id="cKK-W8-s69"/>
+                        <outlet property="splitTimeLabel" destination="JeN-pt-ULA" id="6KZ-Cu-0IO"/>
+                        <outlet property="timesTableView" destination="bUA-Fg-oJ4" id="GMO-7e-Un2"/>
+                        <outlet property="tourButton" destination="hqF-xV-RCY" id="ccm-p7-3LC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="319" y="369"/>
+        </scene>
+    </scenes>
+</document>
